@@ -1,4 +1,4 @@
-package com.andrewkarachun0304.ui
+package com.andrewkarachun0304.alcoapp.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.andrewkarachun0304.adapter.CocktailAdapter
+import com.andrewkarachun0304.alcoapp.adapter.CocktailAdapter
 import com.andrewkarachun0304.alcoapp.R
 import com.andrewkarachun0304.alcoapp.entity.Cocktail
 import com.andrewkarachun0304.alcoapp.mappers.CocktailMapper
@@ -18,7 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class SearchCocktailFragment : Fragment() {
+class SearchCocktailByNameFragment : Fragment() {
     private val cocktailAdapter by lazy {
         CocktailAdapter(object : CocktailAdapter.Listener {
             override fun onClick(cocktail: Cocktail) {
@@ -34,13 +34,13 @@ class SearchCocktailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search_cocktail, container, false)
+        return inflater.inflate(R.layout.fragment_search_cocktail_by_name, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val recyclerView = requireView().findViewById<RecyclerView>(R.id.cocktails_rv)
+        val recyclerView = requireView().findViewById<RecyclerView>(R.id.cocktails_by_name_rv)
 
         recyclerView.apply {
             adapter = cocktailAdapter

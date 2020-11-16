@@ -1,4 +1,4 @@
-package com.andrewkarachun0304.adapter
+package com.andrewkarachun0304.alcoapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -82,6 +82,15 @@ class CocktailAdapter(val listener: Listener) : RecyclerView.Adapter<CocktailAda
             typeTv.text = cocktail.type
             categoryTv.text = cocktail.category
             Picasso.get().load(cocktail.imageUrl).into(imageIv)
+            if (cocktail.state) {
+                starIb.setImageDrawable(
+                    getDrawable(
+                        itemView.resources,
+                        R.drawable.ic_gold_star,
+                        itemView.resources.newTheme()
+                    )
+                )
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.andrewkarachun0304.ui
+package com.andrewkarachun0304.alcoapp.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

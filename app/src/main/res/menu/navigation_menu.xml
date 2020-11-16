@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/seatch_menu_item"
-        android:title="@string/search"
+        android:id="@+id/search_by_name_menu_item"
+        android:title="@string/search_by_name"
         android:icon="@drawable/ic_search"/>
+
+    <item
+        android:id="@+id/search_by_ingredient_menu_item"
+        android:title="@string/search_by_ingredient"
+        android:icon="@drawable/ic_search"/>
+
     <item
         android:id="@+id/chosen_menu_item"
         android:icon="@drawable/ic_star"
-        android:title="@string/chosen" />
+        android:title="@string/chosen"/>
 </menu>

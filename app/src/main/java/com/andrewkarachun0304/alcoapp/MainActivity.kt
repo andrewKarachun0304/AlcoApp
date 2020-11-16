@@ -3,7 +3,7 @@ package com.andrewkarachun0304.alcoapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.andrewkarachun0304.ui.BottomNavigationFragment
+import com.andrewkarachun0304.alcoapp.ui.BottomNavigationFragment
 
 class MainActivity : AppCompatActivity() {
 

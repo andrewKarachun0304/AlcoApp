@@ -4,27 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D8D5D5"
-    tools:context="com.andrewkarachun0304.ui.SearchCocktailFragment">
+    tools:context=".ui.SearchCocktailByNameFragment">
 
-    <EditText
-        android:id="@+id/search_cocktails_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:autofillHints=""
-        android:hint="@string/edit_cocktail_name_or_ingredient"
-        android:inputType="text"
+    <include
+        android:id="@+id/tool_bar1"
+        layout="@layout/tool_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cocktails_rv"
+        android:id="@+id/cocktails_by_name_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_cocktails_et"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar1"
         tools:listitem="@layout/cocktail_tem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

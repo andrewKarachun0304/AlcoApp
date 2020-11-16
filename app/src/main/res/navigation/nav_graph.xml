@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/search_by_name_menu_item">
+
+    <fragment
+        android:id="@+id/search_by_name_menu_item"
+        android:name="com.andrewkarachun0304.alcoapp.ui.SearchCocktailByNameFragment"
+        android:label="fragment_search_cocktail"
+        tools:layout="@layout/fragment_search_cocktail_by_name" >
+    </fragment>
+    <fragment
+        android:id="@+id/chosen_menu_item"
+        android:name="com.andrewkarachun0304.alcoapp.ui.ChosenCocktailFragment"
+        android:label="fragment_chosen_coctail"
+        tools:layout="@layout/fragment_chosen_coctail" />
+    <fragment
+        android:id="@+id/search_by_ingredient_menu_item"
+        android:name="com.andrewkarachun0304.alcoapp.ui.SearchCocktailByIngredientFragment"
+        android:label="fragment_search_cocktail_by_ingredient"
+        tools:layout="@layout/fragment_search_cocktail_by_ingredient" >
+    </fragment>
+</navigation>

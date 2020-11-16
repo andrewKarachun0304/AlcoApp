@@ -1,10 +1,13 @@
-package com.andrewkarachun0304.ui
+package com.andrewkarachun0304.alcoapp.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.andrewkarachun0304.alcoapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -21,29 +24,10 @@ class BottomNavigationFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        childFragmentNavigate(SearchCocktailFragment())
-
         val bottomNavigate =
             requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_view)
-        bottomNavigate.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId){
-                R.id.seatch_menu_item -> {
-                    childFragmentNavigate(SearchCocktailFragment())
-                    true
-                }
-                R.id.chosen_menu_item-> {
-                    childFragmentNavigate(ChosenCocktailFragment())
-                    true
-                }
-                else -> false
-            }
-        }
-    }
-
-    private fun childFragmentNavigate(fragment: Fragment) {
-        childFragmentManager
-            .beginTransaction()
-            .replace(R.id.child_fragment_container, fragment)
-            .commit()
+        val navHostFragment =
+            childFragmentManager.findFragmentById(R.id.child_fragment_container) as NavHostFragment
+         NavigationUI.setupWithNavController(bottomNavigate, navHostFragment.navController)
     }
 }
