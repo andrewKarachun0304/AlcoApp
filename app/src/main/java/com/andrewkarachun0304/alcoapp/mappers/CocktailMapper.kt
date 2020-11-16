@@ -1,6 +1,6 @@
 package com.andrewkarachun0304.alcoapp.mappers
 
-import com.andrewkarachun0304.alcoapp.Cocktail
+import com.andrewkarachun0304.alcoapp.entity.Cocktail
 import com.andrewkarachun0304.alcoapp.dto.CocktailsResponse
 
 object CocktailMapper {

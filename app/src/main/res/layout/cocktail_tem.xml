@@ -24,12 +24,14 @@
             android:id="@+id/cocktail_name_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:gravity="center_horizontal"
             android:textColor="@color/colorBlue"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/cocktail_image_iv"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Name" />
@@ -38,11 +40,13 @@
             android:id="@+id/cocktail_type_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:gravity="center_horizontal"
             android:textColor="@color/colorBlue"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toEndOf="@+id/cocktail_image_iv"
             app:layout_constraintTop_toBottomOf="@+id/cocktail_name_tv"
             tools:text="Type" />
@@ -51,14 +55,27 @@
             android:id="@+id/cocktail_category_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cocktail_image_iv"
-            app:layout_constraintTop_toBottomOf="@+id/cocktail_type_tv"
-            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:gravity="center_horizontal"
             android:textColor="@color/colorBlue"
             android:textSize="16sp"
-            tools:text="Category"/>
+            app:layout_constraintEnd_toStartOf="@+id/star_ib"
+            app:layout_constraintStart_toEndOf="@+id/cocktail_image_iv"
+            app:layout_constraintTop_toBottomOf="@+id/cocktail_type_tv"
+            tools:text="Category" />
+
+        <ImageButton
+            android:id="@+id/star_ib"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_star_outline"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

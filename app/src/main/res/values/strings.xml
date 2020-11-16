@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">AlcoApp</string>
     <string name="edit_cocktail_name_or_ingredient">Edit cocktail name or ingredient</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chosen">Избранное</string>
+    <string name="search">Поиск</string>
 </resources>

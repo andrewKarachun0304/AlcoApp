@@ -1,11 +1,15 @@
-package com.andrewkarachun0304.alcoapp
+package com.andrewkarachun0304.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat.getDrawable
 import androidx.recyclerview.widget.RecyclerView
+import com.andrewkarachun0304.alcoapp.R
+import com.andrewkarachun0304.alcoapp.entity.Cocktail
 import com.squareup.picasso.Picasso
 
 class CocktailAdapter(val listener: Listener) : RecyclerView.Adapter<CocktailAdapter.CocktailVH>() {
@@ -35,6 +39,7 @@ class CocktailAdapter(val listener: Listener) : RecyclerView.Adapter<CocktailAda
         private var typeTv: TextView
         private var categoryTv: TextView
         private var imageIv: ImageView
+        private var starIb: ImageButton
 
         init {
             with(itemView) {
@@ -42,9 +47,32 @@ class CocktailAdapter(val listener: Listener) : RecyclerView.Adapter<CocktailAda
                 typeTv = findViewById(R.id.cocktail_type_tv)
                 categoryTv = findViewById(R.id.cocktail_category_tv)
                 imageIv = findViewById(R.id.cocktail_image_iv)
+                starIb = findViewById(R.id.star_ib)
 
                 setOnClickListener {
                     listener.onClick(cocktailList[layoutPosition])
+                }
+
+                starIb.setOnClickListener {
+                    if (!cocktailList[layoutPosition].state) {
+                        starIb.setImageDrawable(
+                            getDrawable(
+                                resources,
+                                R.drawable.ic_gold_star,
+                                resources.newTheme()
+                            )
+                        )
+                        cocktailList[layoutPosition].state = true
+                    } else {
+                        starIb.setImageDrawable(
+                            getDrawable(
+                                resources,
+                                R.drawable.ic_star_outline,
+                                resources.newTheme()
+                            )
+                        )
+                        cocktailList[layoutPosition].state = false
+                    }
                 }
             }
         }
