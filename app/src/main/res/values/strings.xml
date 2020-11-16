@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AlcoApp</string>
+    <string name="edit_cocktail_name_or_ingredient">Edit cocktail name or ingredient</string>
+</resources>
